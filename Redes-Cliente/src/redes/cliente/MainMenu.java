@@ -31,7 +31,7 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Bebidas = new javax.swing.JDialog();
+        entradas = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -638,14 +638,14 @@ public class MainMenu extends javax.swing.JFrame {
                     .addContainerGap(1256, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout BebidasLayout = new javax.swing.GroupLayout(Bebidas.getContentPane());
-        Bebidas.getContentPane().setLayout(BebidasLayout);
-        BebidasLayout.setHorizontalGroup(
-            BebidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout entradasLayout = new javax.swing.GroupLayout(entradas.getContentPane());
+        entradas.getContentPane().setLayout(entradasLayout);
+        entradasLayout.setHorizontalGroup(
+            entradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        BebidasLayout.setVerticalGroup(
-            BebidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        entradasLayout.setVerticalGroup(
+            entradasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1799, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -767,9 +767,9 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDialog Bebidas;
     private javax.swing.JLabel bebidas_label;
     private javax.swing.JLabel calzones_label;
+    private javax.swing.JDialog entradas;
     private javax.swing.JLabel entradas_label;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
