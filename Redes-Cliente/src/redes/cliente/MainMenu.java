@@ -1307,7 +1307,7 @@ public class MainMenu extends javax.swing.JFrame {
             PizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PizzaLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 775, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PizzaLayout.setVerticalGroup(
             PizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
