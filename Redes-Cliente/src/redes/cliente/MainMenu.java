@@ -222,12 +222,9 @@ public class MainMenu extends javax.swing.JFrame {
         bebidas_label = new javax.swing.JLabel();
         pizza_label4 = new javax.swing.JLabel();
         promos_label = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
 
         ejPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        ejLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Redes-Cliente\\src\\redes\\cliente\\Logo.jpg")); // NOI18N
-
-        ejLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PAN DE AJO.png")); // NOI18N
 
         ejLabel12.setText("Desde   42.00 Lps");
 
@@ -280,8 +277,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(ejButton2))
                 .addContainerGap())
         );
-
-        ejLabel37.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PECHURRRICAS.png")); // NOI18N
 
         ejLabel38.setText("Desde   42.00 Lps");
 
@@ -345,8 +340,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(ejButton7))
                 .addContainerGap())
         );
-
-        ejLabel41.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\HUT WINGS.png")); // NOI18N
 
         ejLabel42.setText("Desde   42.00 Lps");
 
@@ -417,8 +410,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ejLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\00910.png")); // NOI18N
-
         ejLabel15.setText("Desde   29.00 Lps");
 
         ejLabel16.setText("Cantidad");
@@ -487,8 +478,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ejLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PAPAS WEDGES.png")); // NOI18N
-
         ejLabel18.setText("Desde   29.00 Lps");
 
         ejLabel19.setText("Cantidad");
@@ -551,8 +540,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(ejButton4))
                 .addContainerGap())
         );
-
-        ejLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\BOLOGNESA.png")); // NOI18N
 
         ejLabel22.setText("Desde   20.00 Lps");
 
@@ -624,8 +611,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(ejButton5))
                 .addContainerGap())
         );
-
-        ejLabel30.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\ADEREZORANCHERO.png")); // NOI18N
 
         ejLabel31.setText("Desde   29.00 Lps");
 
@@ -771,10 +756,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Redes-Cliente\\src\\redes\\cliente\\Logo.jpg")); // NOI18N
-
-        jLabel33.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\GALLETA.png")); // NOI18N
-
         jLabel34.setText("Desde   42.00 Lps");
 
         jLabel35.setText("Cantidad");
@@ -843,8 +824,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jButton6))
                 .addContainerGap())
         );
-
-        jLabel41.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PECAN PIE.png")); // NOI18N
 
         jLabel42.setText("Desde   42.00 Lps");
 
@@ -962,10 +941,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Redes-Cliente\\src\\redes\\cliente\\Logo.jpg")); // NOI18N
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\SUPER SUPREMA.jpg")); // NOI18N
-
         jLabel4.setText("Elaborada con pepperoni, carne de res y cerdo, salchicha");
 
         jLabel5.setText("italiana, jamón, champiñones, aceitunas, cebolla y chile verde");
@@ -1035,8 +1010,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\4 estaciones.jpg")); // NOI18N
-
         jLabel10.setText("Cuatro diferentes especialidades en una sola pizza: ");
 
         jLabel11.setText("súper suprema, canadiense, pepperoni y jamón.");
@@ -1099,8 +1072,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addContainerGap())
         );
-
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\SUPREMA.jpg")); // NOI18N
 
         jLabel16.setText("Elaborada con pepperoni, carne de res y cerdo");
 
@@ -1171,8 +1142,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\CANADIENSE.jpg")); // NOI18N
-
         jLabel22.setText("Elaborada con pepperoni, jamón, carne de res y cerdo, ");
 
         jLabel23.setText("salchicha italiana y bacon bits.");
@@ -1241,8 +1210,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jButton4))
                 .addContainerGap())
         );
-
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PEPPERONI O JAMON LOVERS.jpg")); // NOI18N
 
         jLabel28.setText("Pepperoni o jamón en abundancia, queso 100% mozzarella");
 
@@ -1370,10 +1337,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel45.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Redes-Cliente\\src\\redes\\cliente\\Logo.jpg")); // NOI18N
-
-        jLabel46.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\REFRESCO.png")); // NOI18N
-
         jLabel47.setText("Desde   42.00 Lps");
 
         jLabel48.setText("Cantidad");
@@ -1428,8 +1391,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        jLabel50.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\7 UP.png")); // NOI18N
-
         jLabel51.setText("Desde   42.00 Lps");
 
         jLabel52.setText("Cantidad");
@@ -1482,8 +1443,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        jLabel54.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\MIRINDA 2 LTS.png")); // NOI18N
-
         jLabel55.setText("Desde   42.00 Lps");
 
         jLabel56.setText("Cantidad");
@@ -1535,8 +1494,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jButton10))
                 .addGap(54, 54, 54))
         );
-
-        jLabel58.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PEPSI 500 ML.png")); // NOI18N
 
         jLabel59.setText("Desde   29.00 Lps");
 
@@ -1592,8 +1549,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        jLabel62.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\MIRINDA 500 ML.png")); // NOI18N
-
         jLabel63.setText("Desde   29.00 Lps");
 
         jLabel64.setText("Cantidad");
@@ -1646,8 +1601,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(54, 54, 54))
         );
 
-        jLabel66.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\AGUAZUL.png")); // NOI18N
-
         jLabel67.setText("Desde   20.00 Lps");
 
         jLabel68.setText("Cantidad");
@@ -1699,8 +1652,6 @@ public class MainMenu extends javax.swing.JFrame {
                     .addComponent(jButton13))
                 .addGap(54, 54, 54))
         );
-
-        jLabel70.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\7 500 ML.png")); // NOI18N
 
         jLabel71.setText("Desde   29.00 Lps");
 
@@ -1832,43 +1783,75 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
-        calzones_label.setText("CALZONES");
+        calzones_label.setBackground(new java.awt.Color(255, 0, 0));
+        calzones_label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        calzones_label.setForeground(new java.awt.Color(255, 255, 255));
+        calzones_label.setText("       CALZONES");
+        calzones_label.setOpaque(true);
 
-        postres_label.setText("POSTRES");
+        postres_label.setBackground(new java.awt.Color(255, 0, 0));
+        postres_label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        postres_label.setForeground(new java.awt.Color(255, 255, 255));
+        postres_label.setText("       POSTRES");
+        postres_label.setOpaque(true);
 
-        entradas_label.setText("ENTRADAS");
+        entradas_label.setBackground(new java.awt.Color(255, 0, 0));
+        entradas_label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        entradas_label.setForeground(new java.awt.Color(255, 255, 255));
+        entradas_label.setText("      ENTRADAS");
+        entradas_label.setOpaque(true);
 
-        bebidas_label.setText("BEBIDAS");
+        bebidas_label.setBackground(new java.awt.Color(255, 0, 0));
+        bebidas_label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        bebidas_label.setForeground(new java.awt.Color(255, 255, 255));
+        bebidas_label.setText("       BEBIDAS");
+        bebidas_label.setOpaque(true);
 
-        pizza_label4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/wallpaper food.jpg"))); // NOI18N
-        pizza_label4.setText("PIZZAS");
+        pizza_label4.setBackground(new java.awt.Color(255, 0, 0));
+        pizza_label4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        pizza_label4.setForeground(new java.awt.Color(255, 255, 255));
+        pizza_label4.setText("        PIZZAS");
+        pizza_label4.setOpaque(true);
 
-        promos_label.setText("PROMOS");
+        promos_label.setBackground(new java.awt.Color(255, 0, 0));
+        promos_label.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        promos_label.setForeground(new java.awt.Color(255, 255, 255));
+        promos_label.setText("       PROMOS");
+        promos_label.setOpaque(true);
+
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/wallpaper food.jpg"))); // NOI18N
+        jLabel74.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(181, 181, 181)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(postres_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addComponent(promos_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(181, 181, 181)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(postres_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                                .addComponent(promos_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(pizza_label4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                                .addComponent(entradas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(calzones_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bebidas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(pizza_label4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addComponent(entradas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(calzones_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bebidas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(101, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(109, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(117, 117, 117)
+                    .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(90, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1879,15 +1862,20 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pizza_label4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(entradas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bebidas_label, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(calzones_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(calzones_label, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bebidas_label, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(postres_label, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(promos_label, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(postres_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(promos_label, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(124, 124, 124)
+                    .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(69, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2095,6 +2083,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
