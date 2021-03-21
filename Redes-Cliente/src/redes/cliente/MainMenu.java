@@ -245,6 +245,8 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel183 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
+        j_eliminar = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
@@ -262,6 +264,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         l_ordenes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         l_ordenes.setModel(new DefaultListModel());
+        l_ordenes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                l_ordenesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(l_ordenes);
 
         jLabel75.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Logo.jpg")); // NOI18N
@@ -2176,6 +2183,14 @@ public class MainMenu extends javax.swing.JFrame {
             .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jMenuItem1.setText("Eliminar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        j_eliminar.add(jMenuItem1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -2595,7 +2610,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         j_ordenes.setVisible(false);
-        
+
         l_ordenes.setModel(new DefaultListModel());
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -2672,9 +2687,33 @@ public class MainMenu extends javax.swing.JFrame {
         j_calzone.setVisible(false);
         j_postre.setVisible(false);
         j_promo.setVisible(false);
-        
+
         l_ordenes.setModel(new DefaultListModel());
     }//GEN-LAST:event_jButton22MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        for (int i = 0; i < pedidos.size(); i++) {
+            if(pedidos.get(i) == ordenSeleccionada){
+                pedidos.remove(i);
+                break;
+            }
+        }
+        
+        l_ordenes.setModel(new DefaultListModel());
+        DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
+        
+        for (Orden p : pedidos) {
+            modelo.addElement(p);
+        }
+        
+        l_ordenes.setModel(modelo);
+        ordenSeleccionada=null;
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void l_ordenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_ordenesMouseClicked
+        ordenSeleccionada = (Object) l_ordenes.getSelectedValue();
+        j_eliminar.show(evt.getComponent(), evt.getX(), evt.getY());
+    }//GEN-LAST:event_l_ordenesMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2905,6 +2944,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -2947,6 +2987,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JDialog j_bebidas;
     private javax.swing.JDialog j_calzone;
+    private javax.swing.JPopupMenu j_eliminar;
     private javax.swing.JDialog j_entradas;
     private javax.swing.JDialog j_ordenes;
     private javax.swing.JDialog j_pizzas;
@@ -2972,6 +3013,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JSpinner s_wings;
     private javax.swing.JSpinner s_wow;
     // End of variables declaration//GEN-END:variables
-
+   Object ordenSeleccionada;
     ArrayList<Orden> pedidos = new ArrayList();
 }
