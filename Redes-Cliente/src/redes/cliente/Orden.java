@@ -50,6 +50,6 @@ public class Orden {
 
     @Override
     public String toString() {
-        return "Orden{" + "nombre=" + nombre + ", precio=" + precio + ", cantidad=" + cantidad + '}';
+        return nombre + "  -  Cantidad: " + cantidad + "  -  Precio (c/u): " + precio ;
     }
 }
