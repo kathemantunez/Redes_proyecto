@@ -43,6 +43,8 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        j_total = new javax.swing.JLabel();
         pago_jdialog = new javax.swing.JDialog();
         jPanel21 = new javax.swing.JPanel();
         jLabel77 = new javax.swing.JLabel();
@@ -273,6 +275,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel75.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Logo.jpg")); // NOI18N
 
+        jLabel76.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel76.setText("Orden");
 
         jButton1.setText("Atras");
@@ -293,14 +296,15 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Total:");
+
+        j_total.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(323, 323, 323))
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(114, 114, 114)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,20 +312,29 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(105, Short.MAX_VALUE))
                     .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel20Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(83, 83, 83)
-                                .addComponent(jButton21)
-                                .addGap(75, 75, 75)
-                                .addComponent(jButton2)
-                                .addGap(98, 98, 98))
-                            .addGroup(jPanel20Layout.createSequentialGroup()
-                                .addComponent(jLabel76)
-                                .addGap(738, 738, 738)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton22)
-                        .addGap(26, 26, 26))))
+                        .addComponent(jLabel76)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(83, 83, 83)
+                .addComponent(jButton21)
+                .addGap(75, 75, 75)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton22)
+                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(323, 323, 323))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(j_total, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(105, 105, 105))))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,13 +345,17 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jLabel76)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(j_total))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton21)
                     .addComponent(jButton2)
                     .addComponent(jButton22))
-                .addGap(40, 40, 40))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
@@ -2598,8 +2615,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2611,14 +2631,18 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         j_ordenes.setVisible(false);
 
+        total = 0;
         l_ordenes.setModel(new DefaultListModel());
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2630,8 +2654,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2643,8 +2670,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2656,8 +2686,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton17MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2669,8 +2702,11 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
         j_ordenes.setModal(true);
@@ -2688,26 +2724,31 @@ public class MainMenu extends javax.swing.JFrame {
         j_postre.setVisible(false);
         j_promo.setVisible(false);
 
+        total = 0;
         l_ordenes.setModel(new DefaultListModel());
     }//GEN-LAST:event_jButton22MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         for (int i = 0; i < pedidos.size(); i++) {
-            if(pedidos.get(i) == ordenSeleccionada){
+            if (pedidos.get(i) == ordenSeleccionada) {
                 pedidos.remove(i);
                 break;
             }
         }
-        
+
         l_ordenes.setModel(new DefaultListModel());
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
         
+        total = 0;
+        
         for (Orden p : pedidos) {
+            total = total + (p.getCantidad() * p.getPrecio());
             modelo.addElement(p);
         }
-        
+
+        j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
-        ordenSeleccionada=null;
+        ordenSeleccionada = null;
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void l_ordenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_ordenesMouseClicked
@@ -2875,6 +2916,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel182;
     private javax.swing.JLabel jLabel183;
     private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2993,6 +3035,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JDialog j_pizzas;
     private javax.swing.JDialog j_postre;
     private javax.swing.JDialog j_promo;
+    private javax.swing.JLabel j_total;
     private javax.swing.JList<String> l_ordenes;
     private javax.swing.JDialog pago_jdialog;
     private javax.swing.JSpinner s_7up;
@@ -3015,4 +3058,5 @@ public class MainMenu extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
    Object ordenSeleccionada;
     ArrayList<Orden> pedidos = new ArrayList();
+    int total = 0;
 }
