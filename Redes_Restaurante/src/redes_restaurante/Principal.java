@@ -27,12 +27,14 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        bt_cliente.setEnabled(false);
+        //bt_cliente.setEnabled(false);
         //bt_cliente.setVisible(false);
                 
         cierre.setEnabled(false);
         //cierre.setVisible(false);
         cargarTablacomida();
+        cargarTablaPostre();
+        cargarTablaBebidas();
     }
     
     
@@ -48,7 +50,6 @@ public class Principal extends javax.swing.JFrame {
         frame_servidor = new javax.swing.JDialog();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         JFInfo = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
         apertura = new javax.swing.JButton();
         cierre = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
@@ -131,8 +132,8 @@ public class Principal extends javax.swing.JFrame {
         login_servidor = new javax.swing.JDialog();
         jLabel3 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        user = new javax.swing.JTextField();
+        pas = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         bgLogin = new javax.swing.JLabel();
         MesasDialog = new javax.swing.JDialog();
@@ -143,17 +144,12 @@ public class Principal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        bt_cliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
 
         frame_servidor.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JFInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel14.setText("SMOKE");
-        JFInfo.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, 59));
 
         apertura.setBackground(new java.awt.Color(102, 102, 102));
         apertura.setFont(new java.awt.Font("Bahnschrift", 1, 18)); // NOI18N
@@ -602,13 +598,13 @@ public class Principal extends javax.swing.JFrame {
         jLabel19.setText("CONTRASEÑA:");
         login_servidor.getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 290, 150, 40));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                userActionPerformed(evt);
             }
         });
-        login_servidor.getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 160, 30));
-        login_servidor.getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 160, 30));
+        login_servidor.getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 160, 30));
+        login_servidor.getContentPane().add(pas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 160, 30));
 
         jButton2.setBackground(new java.awt.Color(102, 102, 102));
         jButton2.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
@@ -663,7 +659,7 @@ public class Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Servidor");
+        jButton1.setText("Login");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -674,20 +670,12 @@ public class Principal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, -1, -1));
-
-        bt_cliente.setText("BIENVENIDO ");
-        bt_cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_clienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(bt_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 310, 70));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Calibri Light", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("RESTAURANTE PIZZA HUT");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/backgroundLogin.jpg"))); // NOI18N
         jLabel22.setText("jLabel22");
@@ -980,7 +968,7 @@ public class Principal extends javax.swing.JFrame {
                 
             }
             
-            cargarTablacomida();
+            cargarTablaBebidas();
             js_cantidad_bebida.setValue(Integer.parseInt(cantidad));
             nombresito_bebida=nombre;
              jt_nombre_bebida.setText(nombre);
@@ -1021,7 +1009,7 @@ public class Principal extends javax.swing.JFrame {
                 
             }
             
-            cargarTablacomida();
+            cargarTablaPostre();
             js_cantidad_postre.setValue(Integer.parseInt(cantidad));
             nombresito_postre=nombre;
              jt_nombre_postre.setText(nombre);
@@ -1050,7 +1038,7 @@ public class Principal extends javax.swing.JFrame {
                     ps.setString(1, nombr2e);
                     ps.executeUpdate();
                     
-                    cargarTablacomida();
+                    cargarTablaBebidas();
                     JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
                     
                     
@@ -1102,7 +1090,7 @@ public class Principal extends javax.swing.JFrame {
                     
                     
                     ps.executeUpdate();
-                    cargarTablacomida();
+                    cargarTablaBebidas();
                     JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
                     
                     
@@ -1144,19 +1132,18 @@ public class Principal extends javax.swing.JFrame {
                 //BASE DE DATOS
                 try {
                     Connection con=Conexion.getConnection();
-                    System.out.println("pasoooo");
                     PreparedStatement ps=con.prepareStatement("INSERT INTO Inventario (Nombre,Descripcion,Precio,Cantidad,Categoria) "
                             + "VALUES (?,?,?,?,?) ");
                     ps.setString(1, nombre);
                     ps.setString(2, descripcion);
                     ps.setFloat(3, precio);
                     ps.setInt(4, cantidad);
-                    ps.setString(5, "comida");
+                    ps.setString(5, "bebida");
                     
                     
                     ps.executeUpdate();
-                    cargarTablacomida();
-                    JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                    cargarTablaBebidas();
+                    JOptionPane.showMessageDialog(frame_servidor, "Bebida agregada exitosamente");
                     
                     
                 } catch (Exception e) {
@@ -1193,8 +1180,8 @@ public class Principal extends javax.swing.JFrame {
                     ps.setString(1, nombr2e);
                     ps.executeUpdate();
                     
-                    cargarTablacomida();
-                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    cargarTablaPostre();
+                    JOptionPane.showMessageDialog(frame_servidor, "Postre modificada exitosamente");
                     
                     
                 } catch (Exception e) {
@@ -1245,7 +1232,7 @@ public class Principal extends javax.swing.JFrame {
                     
                     
                     ps.executeUpdate();
-                    cargarTablacomida();
+                    cargarTablaPostre();
                     JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
                     
                     
@@ -1294,12 +1281,12 @@ public class Principal extends javax.swing.JFrame {
                     ps.setString(2, descripcion);
                     ps.setFloat(3, precio);
                     ps.setInt(4, cantidad);
-                    ps.setString(5, "comida");
+                    ps.setString(5, "postre");
                     
                     
                     ps.executeUpdate();
-                    cargarTablacomida();
-                    JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                    cargarTablaPostre();
+                    JOptionPane.showMessageDialog(frame_servidor, "Postre agregada exitosamente");
                     
                     
                 } catch (Exception e) {
@@ -1331,7 +1318,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void aperturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aperturaMouseClicked
         JOptionPane.showMessageDialog(frame_servidor, "¡Restaurante aperturado!\nYa pueden entrar los clientes");
-        bt_cliente.setEnabled(true);
+       // bt_cliente.setEnabled(true);
         //bt_cliente.setVisible(true);
         
         cierre.setEnabled(true);
@@ -1343,7 +1330,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void cierreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cierreMouseClicked
      JOptionPane.showMessageDialog(frame_servidor, "¡Restaurante cerrado!\nCaja cerrada");
-        bt_cliente.setEnabled(false);
+        //bt_cliente.setEnabled(false);
        // bt_cliente.setVisible(false);
         
         apertura.setEnabled(true);
@@ -1361,14 +1348,18 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jt_precio_postreActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_userActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        login_servidor.setVisible(false);//Oculpar modal si este logra logearse
+        if(user.getText().equals("admin") && pas.getText().equals("123")){
+            login_servidor.setVisible(false);//Oculpar modal si este logra logearse
         frame_servidor.setVisible(true);//Mostrar las opciones al usuario
         frame_servidor.pack();//Ajustar modal 
+        }
+        
+        
             // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -1380,10 +1371,6 @@ public class Principal extends javax.swing.JFrame {
 MesasDialog.setVisible(true);
 MesasDialog.pack();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void bt_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_clienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bt_clienteActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
 MesasDialog.setVisible(true);
@@ -1493,7 +1480,6 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JButton bt_agregar_bebida;
     private javax.swing.JButton bt_agregar_comida;
     private javax.swing.JButton bt_agregar_postre;
-    private javax.swing.JButton bt_cliente;
     private javax.swing.JButton bt_eliminar_bebida;
     private javax.swing.JButton bt_eliminar_comida;
     private javax.swing.JButton bt_eliminar_postre;
@@ -1529,7 +1515,6 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1557,8 +1542,6 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JSpinner js_cantidad_bebida;
     private javax.swing.JSpinner js_cantidad_comida;
     private javax.swing.JSpinner js_cantidad_postre;
@@ -1573,10 +1556,12 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JTextField jt_precio_postre;
     private javax.swing.JDialog login_servidor;
     private javax.swing.JButton logout;
+    private javax.swing.JTextField pas;
     private javax.swing.JTable table_actual;
     private javax.swing.JTable table_bebida;
     private javax.swing.JTable table_comida;
     private javax.swing.JTable table_postre;
+    private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
     ArrayList<Comida> comidas=new ArrayList();
     ArrayList<Bebida> bebidas=new ArrayList();
@@ -1606,7 +1591,81 @@ MesasDialog.pack();        // TODO add your handling code here:
         
         try {
              Connection con=Conexion.getConnection();
-             ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario");
+             ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Categoria='comida'");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
+    }
+    private void cargarTablaPostre(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)table_postre.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < table_postre.getColumnCount(); i++) {
+            table_postre.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Categoria='postre'");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
+    }
+    private void cargarTablaBebidas(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)table_bebida.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < table_bebida.getColumnCount(); i++) {
+            table_bebida.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Categoria='bebida'");
              
              rs=ps.executeQuery();
              rsmd=rs.getMetaData();

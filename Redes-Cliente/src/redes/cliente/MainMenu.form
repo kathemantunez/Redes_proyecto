@@ -26,16 +26,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel20" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="166" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel20" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -104,7 +106,7 @@
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="j_total" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="47" max="32767" attributes="0"/>
+                          <EmptySpace pref="35" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="b_atrasOrden" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton21" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -135,6 +137,7 @@
                       </Properties>
                       <Events>
                         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="l_ordenesMouseClicked"/>
+                        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="l_ordenesMouseEntered"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -143,11 +146,6 @@
                   </SubComponents>
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel75">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\Logo.jpg"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel76">
                   <Properties>
@@ -375,11 +373,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel77">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\Logo.jpg"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel91">
               <Properties>
@@ -638,11 +631,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel32">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PEPPERONI O JAMON LOVERS.jpg"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel53">
                   <Properties>
@@ -756,11 +744,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel70">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\4 estaciones.jpg"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel71">
                   <Properties>
@@ -879,11 +862,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel107">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\CANADIENSE.jpg"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel108">
                   <Properties>
@@ -909,6 +887,7 @@
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_canadienseMouseClicked"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="b_canadienseActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="s_canadiense">
@@ -1086,11 +1065,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel33">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\AGUAZUL.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel55">
                   <Properties>
@@ -1186,11 +1160,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel114">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\7 500 ML.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel115">
                   <Properties>
@@ -1286,11 +1255,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel120">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PEPSI 500 ML.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel121">
                   <Properties>
@@ -1443,26 +1407,20 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="s_pechu" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="b_pechu" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel63" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="s_pechu" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="b_pechu" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel135" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel63" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel135" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -1502,11 +1460,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel34">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PECHURRRICAS.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel58">
                   <Properties>
@@ -1618,11 +1571,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel117">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PAN DE AJO.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel122">
                   <Properties>
@@ -1736,11 +1684,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel129">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\HUT WINGS.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel130">
                   <Properties>
@@ -1959,11 +1902,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel35">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\Chicken Buffalo Ranch.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel136">
                   <Properties>
@@ -2087,11 +2025,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel140">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\CALZONE 3.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel141">
                   <Properties>
@@ -2210,11 +2143,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel146">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\CALZONE SUPREMO.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel147">
                   <Properties>
@@ -2430,11 +2358,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel159">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\GALLETA.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel160">
                   <Properties>
@@ -2553,11 +2476,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel165">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PECAN PIE.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel166">
                   <Properties>
@@ -2782,11 +2700,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel36">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\Pechu Pack.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel156">
                   <Properties>
@@ -2905,11 +2818,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel172">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\Wow Box.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel173">
                   <Properties>
@@ -3023,11 +2931,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel178">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\PAQUETEMIX.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel179">
                   <Properties>
@@ -3318,9 +3221,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\pizza.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="   Pizzas"/>
           </Properties>
           <Events>
@@ -3331,9 +3231,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\soft-drink.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="   Bebidas"/>
           </Properties>
@@ -3346,9 +3243,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\cake.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="   Postres"/>
           </Properties>
           <Events>
@@ -3359,9 +3253,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\fried-chicken.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="   Entradas"/>
           </Properties>
@@ -3374,9 +3265,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\calzone.png"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="   Calzone"/>
           </Properties>
           <Events>
@@ -3387,9 +3275,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GL 502V2\Desktop\Redes_proyecto\Fotos Pizza Hut\discount.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="   Promos"/>
           </Properties>

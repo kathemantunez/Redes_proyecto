@@ -5,6 +5,10 @@
  */
 package redes.cliente;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.DefaultListModel;
@@ -268,10 +272,11 @@ public class MainMenu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 l_ordenesMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                l_ordenesMouseEntered(evt);
+            }
         });
         jScrollPane1.setViewportView(l_ordenes);
-
-        jLabel75.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Logo.jpg")); // NOI18N
 
         jLabel76.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel76.setText("Orden");
@@ -354,7 +359,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(j_total))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(b_atrasOrden)
                     .addComponent(jButton21)
@@ -368,14 +373,16 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout j_ordenesLayout = new javax.swing.GroupLayout(j_ordenes.getContentPane());
@@ -394,8 +401,6 @@ public class MainMenu extends javax.swing.JFrame {
         j_pago.setMinimumSize(new java.awt.Dimension(1200, 800));
 
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel77.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Logo.jpg")); // NOI18N
 
         jLabel91.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel91.setText("Recibo");
@@ -571,8 +576,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel32.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PEPPERONI O JAMON LOVERS.jpg")); // NOI18N
-
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel53.setText("PEPPERONI O JAMÓN LOVERS");
 
@@ -639,8 +642,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_pepperoni)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel70.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\4 estaciones.jpg")); // NOI18N
 
         jLabel71.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel71.setText("4 ESTACIONES");
@@ -715,8 +716,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        jLabel107.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\CANADIENSE.jpg")); // NOI18N
-
         jLabel108.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel108.setText("CANADIENSE");
 
@@ -728,6 +727,11 @@ public class MainMenu extends javax.swing.JFrame {
         b_canadiense.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 b_canadienseMouseClicked(evt);
+            }
+        });
+        b_canadiense.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_canadienseActionPerformed(evt);
             }
         });
 
@@ -859,8 +863,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel33.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\AGUAZUL.png")); // NOI18N
-
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel55.setText("AGUAZUL 20 OZ.");
 
@@ -920,8 +922,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        jLabel114.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\7 500 ML.png")); // NOI18N
-
         jLabel115.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel115.setText("7 UP 1/2 L.");
 
@@ -980,8 +980,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_7up)))
                 .addGap(29, 29, 29))
         );
-
-        jLabel120.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PEPSI 500 ML.png")); // NOI18N
 
         jLabel121.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel121.setText("PEPSI 1/2 L.");
@@ -1111,8 +1109,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel34.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PECHURRRICAS.png")); // NOI18N
-
         jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel58.setText("PECHURRICAS");
 
@@ -1146,22 +1142,18 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(jLabel61)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addComponent(jLabel62)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(s_pechu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(b_pechu))
-                            .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addComponent(jLabel63)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jLabel62)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(s_pechu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(b_pechu))
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel135)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel63)
+                            .addComponent(jLabel135))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
@@ -1189,8 +1181,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_pechu)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel117.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PAN DE AJO.png")); // NOI18N
 
         jLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel122.setText("PAN DE AJO SUPREMO");
@@ -1256,8 +1246,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_ajo)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel129.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\HUT WINGS.png")); // NOI18N
 
         jLabel130.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel130.setText("HUT WINGS");
@@ -1401,8 +1389,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel35.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Chicken Buffalo Ranch.png")); // NOI18N
-
         jLabel136.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel136.setText("CHICKEN BUFFALO RANCH");
 
@@ -1481,8 +1467,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        jLabel140.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\CALZONE 3.png")); // NOI18N
-
         jLabel141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel141.setText("CALZONE MEAT LOVERS");
 
@@ -1555,8 +1539,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_lovers)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel146.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\CALZONE SUPREMO.png")); // NOI18N
 
         jLabel147.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel147.setText("CALZONE SUPREMO");
@@ -1700,8 +1682,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel154.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel159.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\GALLETA.png")); // NOI18N
-
         jLabel160.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel160.setText("HERSHEY´S CHOCOLATE CHIP");
 
@@ -1774,8 +1754,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_galleta)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel165.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PECAN PIE.png")); // NOI18N
 
         jLabel166.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel166.setText("PECAN PIE");
@@ -1917,8 +1895,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel155.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
-        jLabel36.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Pechu Pack.png")); // NOI18N
-
         jLabel156.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel156.setText("PECHU PACK");
 
@@ -1997,8 +1973,6 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
-        jLabel172.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\Wow Box.png")); // NOI18N
-
         jLabel173.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel173.setText("WOW BOX");
 
@@ -2071,8 +2045,6 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_wow)))
                 .addGap(11, 11, 11))
         );
-
-        jLabel178.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\PAQUETEMIX.png")); // NOI18N
 
         jLabel179.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel179.setText("HUT PACK");
@@ -2276,7 +2248,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/wallpaper food.jpg"))); // NOI18N
 
         jLabel99.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel99.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\pizza.png")); // NOI18N
         jLabel99.setText("   Pizzas");
         jLabel99.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2285,7 +2256,6 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel98.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel98.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\soft-drink.png")); // NOI18N
         jLabel98.setText("   Bebidas");
         jLabel98.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2294,7 +2264,6 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel100.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel100.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\cake.png")); // NOI18N
         jLabel100.setText("   Postres");
         jLabel100.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2303,7 +2272,6 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel101.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel101.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\fried-chicken.png")); // NOI18N
         jLabel101.setText("   Entradas");
         jLabel101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2312,7 +2280,6 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel102.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel102.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\calzone.png")); // NOI18N
         jLabel102.setText("   Calzone");
         jLabel102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2321,7 +2288,6 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel103.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel103.setIcon(new javax.swing.ImageIcon("C:\\Users\\GL 502V2\\Desktop\\Redes_proyecto\\Fotos Pizza Hut\\discount.png")); // NOI18N
         jLabel103.setText("   Promos");
         jLabel103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2407,144 +2373,475 @@ public class MainMenu extends javax.swing.JFrame {
         String nombre = "CANADIENSE";
         int precio = 280;
         int cantidad = (int) s_canadiense.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
 
-        JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
+       
+       
+        
+        PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Canadiense'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        s_canadiense.setValue(1);
+                s_estaciones.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Canadiense' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_b_canadienseMouseClicked
 
     private void b_estacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_estacionesMouseClicked
         String nombre = "4 ESTACIONES";
         int precio = 318;
         int cantidad = (int) s_estaciones.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+        
+        PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='4 Estaciones'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
+                s_estaciones.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='4 Estaciones' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+           
+        //pedidos.add(o);
 
-        s_estaciones.setValue(1);
+       
     }//GEN-LAST:event_b_estacionesMouseClicked
 
     private void b_pepperoniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pepperoniMouseClicked
         String nombre = "PEPPERONI O JAMÓN LOVERS";
         int precio = 250;
         int cantidad = (int) s_pepperoni.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+        
+        
+        PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Peperoni o Jamón Lovers'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_pepperoni.setValue(1);
+                s_estaciones.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Peperoni o Jamón Lovers' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_b_pepperoniMouseClicked
 
     private void b_aguazulMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_aguazulMouseClicked
         String nombre = "AGUAZUL 20 OZ";
         int precio = 20;
         int cantidad = (int) s_aguazul.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
-
-        JOptionPane.showMessageDialog(j_bebidas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_aguazul.setValue(1);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='AGUA 20 OZ'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
+                 s_aguazul.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='AGUA 20 OZ' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_aguazulMouseClicked
 
     private void b_7upMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_7upMouseClicked
         String nombre = "7 UP 1/2 L";
         int precio = 29;
         int cantidad = (int) s_7up.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='7UP 1/2 L'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_bebidas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_7up.setValue(1);
+               s_7up.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='7UP 1/2 L' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_7upMouseClicked
 
     private void b_pepsiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pepsiMouseClicked
         String nombre = "PEPSI 1/2 L";
         int precio = 29;
         int cantidad = (int) s_pepsi.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='PEPSI 1/2 L'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_bebidas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_pepsi.setValue(1);
+                s_pepsi.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='PEPSI 1/2 L' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_pepsiMouseClicked
 
     private void b_pechuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pechuMouseClicked
         String nombre = "PECHURRICAS";
         int precio = 129;
         int cantidad = (int) s_pechu.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Pechurricas'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_entradas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_pechu.setValue(1);
+                s_pechu.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Pechurricas' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_pechuMouseClicked
 
     private void b_ajoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_ajoMouseClicked
         String nombre = "PAN DE AJO SUPREMO";
         int precio = 89;
         int cantidad = (int) s_ajo.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Pan de ajo supremo'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_entradas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_ajo.setValue(1);
+                s_ajo.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Pan de ajo supremo' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_ajoMouseClicked
 
     private void b_wingsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_wingsMouseClicked
         String nombre = "HUT WINGS";
         int precio = 149;
         int cantidad = (int) s_wings.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Hut Wings'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_entradas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_wings.setValue(1);
+                s_wings.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Hut Wings' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_wingsMouseClicked
 
     private void b_buffaloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_buffaloMouseClicked
         String nombre = "CHICKEN BUFFALO RANCH";
         int precio = 115;
         int cantidad = (int) s_buffalo.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Chiken Buffalo'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_calzone, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_buffalo.setValue(1);
+                s_buffalo.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Chiken Buffalo' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_buffaloMouseClicked
 
     private void b_loversMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_loversMouseClicked
         String nombre = "CALZONE MEAT LOVERS";
         int precio = 115;
         int cantidad = (int) s_lovers.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Calzone Meat Lovers'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_calzone, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_lovers.setValue(1);
+                s_lovers.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Calzone Meat Lovers' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_loversMouseClicked
 
     private void b_supremoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_supremoMouseClicked
         String nombre = "CALZONE SUPREMO";
         int precio = 115;
         int cantidad = (int) s_supremo.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+        PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Calzone Supremo'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_calzone, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
-
-        s_supremo.setValue(1);
+                s_supremo.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Calzone Supremo' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_supremoMouseClicked
 
     private void jLabel98MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel98MouseClicked
@@ -2572,24 +2869,78 @@ public class MainMenu extends javax.swing.JFrame {
         String nombre = "HERSHEY´S CHOCOLATE CHIP";
         int precio = 149;
         int cantidad = (int) s_galleta.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Hersheys Chocolate Chip'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_postre, "Se agregaron " + cantidad + " HERSHEY´S CHOCOLATE CHIP a la orden!");
-
-        s_galleta.setValue(1);
+                s_galleta.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Hersheys Chocolate Chip' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_galletaMouseClicked
 
     private void b_pieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pieMouseClicked
         String nombre = "PECAN PIE";
         int precio = 89;
         int cantidad = (int) s_pie.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Pecan Pie'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_postre, "Se agregaron " + cantidad + " PECAN PIE a la orden!");
-
-        s_pie.setValue(1);
+                s_pie.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Pecan Pie' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_pieMouseClicked
 
     private void jLabel100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel100MouseClicked
@@ -2603,36 +2954,119 @@ public class MainMenu extends javax.swing.JFrame {
         String nombre = "PECHU PACK";
         int precio = 599;
         int cantidad = (int) s_pechupack.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Pechu Pack'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_promo, "Se agregaron " + cantidad + " PECHU PACK a la orden!");
-
-        s_pechupack.setValue(1);
+                 s_pechupack.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Pechu Pack' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+       
     }//GEN-LAST:event_b_pechupackMouseClicked
 
     private void b_wowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_wowMouseClicked
         String nombre = "WOW BOX";
         int precio = 459;
         int cantidad = (int) s_wow.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+        
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Wow Box'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_promo, "Se agregaron " + cantidad + " WOW BOX a la orden!");
-
-        s_wow.setValue(1);
+                s_wow.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Wow Box' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_wowMouseClicked
 
     private void b_hutpackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_hutpackMouseClicked
         String nombre = "HUT PACK";
         int precio = 299;
         int cantidad = (int) s_hutpack.getValue();
-        Orden o = new Orden(nombre, precio, cantidad);
-        pedidos.add(o);
+        
+                PreparedStatement ps,ps1;
+        ResultSet rs;
+        int cant2=0;
+        
+        try {
+             Connection con=Conexion.getConnection();
+              ps=con.prepareStatement("SELECT Cantidad FROM Inventario WHERE Nombre='Hut Pack'");
+              rs=ps.executeQuery();
+              while(rs.next()){
+                  cant2=rs.getInt("Cantidad");
+                 
+              }
+              if(cant2>=cantidad){
+                Orden o = new Orden(nombre, precio, cantidad);
+                pedidos.add(o);
+                JOptionPane.showMessageDialog(j_pizzas, "Se agregaron " + cantidad + " " + nombre + " a la orden!");
 
-        JOptionPane.showMessageDialog(j_promo, "Se agregaron " + cantidad + " HUT PACK a la orden!");
-
-        s_hutpack.setValue(1);
+                s_hutpack.setValue(1);
+                
+                con=Conexion.getConnection();
+                ps1=con.prepareStatement("UPDATE Inventario SET Cantidad=? WHERE Nombre='Hut Pack' ");
+                ps1.setInt(1, cant2-cantidad);
+                ps1.executeUpdate();
+              }else{
+                  JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
+               }
+             
+            
+             
+             
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_b_hutpackMouseClicked
 
     private void jLabel103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel103MouseClicked
@@ -2668,11 +3102,13 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         DefaultListModel modelo = (DefaultListModel) l_ordenes.getModel();
-        for (Orden p : pedidos) {
-            total = total + (p.getCantidad() * p.getPrecio());
-            modelo.addElement(p);
+        try {
+            
+            for (Orden p : pedidos) {
+                total = total + (p.getCantidad() * p.getPrecio());
+                modelo.addElement(p);
         }
-
+       
         j_total.setText(Integer.toString(total));
         l_ordenes.setModel(modelo);
 
@@ -2680,6 +3116,10 @@ public class MainMenu extends javax.swing.JFrame {
         j_ordenes.pack();
         j_ordenes.setLocationRelativeTo(this);
         j_ordenes.setVisible(true);
+        } catch (Exception e) {
+        }
+        
+        
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void b_atrasOrdenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_atrasOrdenMouseClicked
@@ -2812,6 +3252,9 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         JOptionPane.showMessageDialog(j_pago, "Pronto llegara un mesero a atenderlo. Gracias!");
+        pedidos.removeAll(pedidos);
+            total = 0;
+            ordenSeleccionada = null;
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void b_pagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pagoMouseClicked
@@ -2901,6 +3344,28 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         JOptionPane.showMessageDialog(j_parallevar, "Su orden se ha enviado");
+        try {
+            Connection con=Conexion.getConnection();
+            PreparedStatement ps;
+            
+            for (int i = 0; i < pedidos.size(); i++) {
+                ps=con.prepareStatement("INSERT INTO DETALLE_PEDIDO (ID_detalle,Nombre_Producto,Cantidad,Precio,"
+                        + "Estado,Categoria,ID_mesa) VALUES(?,?,?,?,?,?,?)");
+                ps.setInt(1, id_pedido_actual);
+                ps.setString(2, pedidos.get(i).nombre);
+                ps.setInt(3, pedidos.get(i).getCantidad());
+                ps.setDouble(4, (double)pedidos.get(i).getPrecio());
+                ps.setInt(5,1);
+                ps.setString(6, "Comer en restaurante");
+                ps.setInt(7, 1);
+                
+                ps.executeUpdate();
+                
+            }
+        } catch (Exception e) {
+        }
+            
+        
 
         j_pizzas.setVisible(false);
         j_bebidas.setVisible(false);
@@ -2932,6 +3397,14 @@ public class MainMenu extends javax.swing.JFrame {
         b_menup.setEnabled(false);
         jButton21.setEnabled(false);
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void l_ordenesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_ordenesMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_l_ordenesMouseEntered
+
+    private void b_canadienseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_canadienseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b_canadienseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3198,4 +3671,6 @@ public class MainMenu extends javax.swing.JFrame {
    Object ordenSeleccionada;
     ArrayList<Orden> pedidos = new ArrayList();
     int total = 0;
+    
+    int id_pedido_actual;
 }
