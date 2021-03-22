@@ -3383,6 +3383,26 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         JOptionPane.showMessageDialog(j_parallevar, "Su orden se ha enviado");
+         try {
+            Connection con=Conexion.getConnection();
+            PreparedStatement ps;
+            
+            for (int i = 0; i < pedidos.size(); i++) {
+                ps=con.prepareStatement("INSERT INTO DETALLE_PEDIDO (ID_detalle,Nombre_Producto,Cantidad,Precio,"
+                        + "Estado,Categoria,ID_llevar) VALUES(?,?,?,?,?,?,?)");
+                ps.setInt(1, id_pedido_actual);
+                ps.setString(2, pedidos.get(i).nombre);
+                ps.setInt(3, pedidos.get(i).getCantidad());
+                ps.setDouble(4, (double)pedidos.get(i).getPrecio());
+                ps.setInt(5,1);
+                ps.setString(6, "Para llevar");
+                ps.setInt(7, 1);
+                
+                ps.executeUpdate();
+                
+            }
+        } catch (Exception e) {
+        }
 
         j_pizzas.setVisible(false);
         j_bebidas.setVisible(false);
