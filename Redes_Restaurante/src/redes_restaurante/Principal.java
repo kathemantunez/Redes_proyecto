@@ -956,234 +956,369 @@ public class Principal extends javax.swing.JFrame {
     private void table_bebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_bebidaMouseClicked
         DefaultTableModel tblModel=(DefaultTableModel)table_bebida.getModel();
         
-        String cantidad=tblModel.getValueAt(table_bebida.getSelectedRow(), 0).toString();
-        String nombre=tblModel.getValueAt(table_bebida.getSelectedRow(), 1).toString();
-        String precio=tblModel.getValueAt(table_bebida.getSelectedRow(), 2).toString();
-        String descripcion=tblModel.getValueAt(table_bebida.getSelectedRow(), 3).toString();
+        String cantidad="";
+        String nombre="";
+        String precio="";
+        String descripcion="";
+        try {
+            int fila=table_bebida.getSelectedRow();
+            String idnombre=table_bebida.getValueAt(fila, 1).toString();
+            
+            PreparedStatement ps;
+            ResultSet rs;
+            
+            Connection con=Conexion.getConnection();
+            ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Nombre=?");
+            ps.setString(1, idnombre);
+            rs= ps.executeQuery();
+            
+            while( rs.next()){
+                cantidad=rs.getString("Cantidad");
+                nombre=rs.getString("Nombre");
+                precio=rs.getString("Precio");
+                descripcion=rs.getString("Descripcion");
+                
+            }
+            
+            cargarTablacomida();
+            js_cantidad_bebida.setValue(Integer.parseInt(cantidad));
+            nombresito_bebida=nombre;
+             jt_nombre_bebida.setText(nombre);
+            jt_precio_bebida.setText(precio);
+            jt_descripción_bebida.setText(descripcion);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
         
-        js_cantidad_bebida.setValue(Integer.parseInt(cantidad));
-        jt_nombre_bebida.setText(nombre);
-        jt_precio_bebida.setText(precio);
-        jt_descripción_bebida.setText(descripcion);
         
     }//GEN-LAST:event_table_bebidaMouseClicked
 
     private void table_postreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_postreMouseClicked
         DefaultTableModel tblModel=(DefaultTableModel)table_postre.getModel();
         
-        String cantidad=tblModel.getValueAt(table_postre.getSelectedRow(), 0).toString();
-        String nombre=tblModel.getValueAt(table_postre.getSelectedRow(), 1).toString();
-        String precio=tblModel.getValueAt(table_postre.getSelectedRow(), 2).toString();
-        String descripcion=tblModel.getValueAt(table_postre.getSelectedRow(), 3).toString();
+        String cantidad="";
+        String nombre="";
+        String precio="";
+        String descripcion="";
+        try {
+            int fila=table_postre.getSelectedRow();
+            String idnombre=table_postre.getValueAt(fila, 1).toString();
+            
+            PreparedStatement ps;
+            ResultSet rs;
+            
+            Connection con=Conexion.getConnection();
+            ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Nombre=?");
+            ps.setString(1, idnombre);
+            rs= ps.executeQuery();
+            
+            while( rs.next()){
+                cantidad=rs.getString("Cantidad");
+                nombre=rs.getString("Nombre");
+                precio=rs.getString("Precio");
+                descripcion=rs.getString("Descripcion");
+                
+            }
+            
+            cargarTablacomida();
+            js_cantidad_postre.setValue(Integer.parseInt(cantidad));
+            nombresito_postre=nombre;
+             jt_nombre_postre.setText(nombre);
+            jt_precio_postre.setText(precio);
+            jt_descripción_postre.setText(descripcion);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
         
-        js_cantidad_postre.setValue(Integer.parseInt(cantidad));
-        jt_nombre_postre.setText(nombre);
-        jt_precio_postre.setText(precio);
-        jt_descripción_postre.setText(descripcion);
         
     }//GEN-LAST:event_table_postreMouseClicked
 
     private void bt_eliminar_bebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminar_bebidaActionPerformed
-       DefaultTableModel tblModel=(DefaultTableModel)table_bebida.getModel();
-       if(table_bebida.getSelectedRowCount()==1){
-           String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-           
-           tblModel.removeRow(table_bebida.getSelectedRow());
-           
-           for (int i = 0; i < bebidas.size(); i++) {
-               if(bebidas.get(i).getNombre().equals(nombretemp)){
-                   bebidas.remove(i);
-                   break;
-               }
-           }
-           JOptionPane.showMessageDialog(frame_servidor, "Bebida eliminada exitosamente");
-       }else{
-           if(table_bebida.getRowCount()==0){
-               //empty
-               JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-           }else{
-               //no empty pero no esta seleccionado
-               JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para eliminar");
-           }
-       }
+      String nombr2e=jt_nombre_bebida.getText();
+          
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+                
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("DELETE Inventario WHERE Nombre=?");
+                    ps.setString(1, nombr2e);
+                    ps.executeUpdate();
+                    
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_bebida.setValue(0);
+            jt_precio_bebida.setText("");
+            jt_nombre_bebida.setText("");
+            jt_descripción_bebida.setText("");
+            
+        
     }//GEN-LAST:event_bt_eliminar_bebidaActionPerformed
 
     private void bt_modificar_bebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificar_bebidaMouseClicked
-        DefaultTableModel tblModel=(DefaultTableModel)table_bebida.getModel();
-        
-        if(table_bebida.getSelectedRowCount()==1){
-            String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-            
-            String cantidad=Integer.toString((Integer)js_cantidad_bebida.getValue());
-            String nombre=jt_nombre_bebida.getText();
-            String precio=jt_precio_bebida.getText();
-            String descripcion=jt_descripción_bebida.getText();
-            
-            tblModel.setValueAt(cantidad,table_bebida.getSelectedRow(),0);
-            tblModel.setValueAt(nombre,table_bebida.getSelectedRow(),1);
-            tblModel.setValueAt(precio,table_bebida.getSelectedRow(),2);
-            tblModel.setValueAt(descripcion,table_bebida.getSelectedRow(),3);
-            
-            try {
-                for (int i = 0; i < bebidas.size(); i++) {
-                    if(bebidas.get(i).getNombre().equals(nombretemp)){
-                        bebidas.get(i).setCantidad((Integer)js_cantidad_bebida.getValue());
-                        bebidas.get(i).setNombre(jt_nombre_bebida.getText());
-                        bebidas.get(i).setPrecio(Float.parseFloat(jt_precio_bebida.getText()));
-                        bebidas.get(i).setDescripción(jt_descripción_bebida.getText());
-                    }
-                }
-            } catch (Exception e) {
-            }
-            
-            
-            JOptionPane.showMessageDialog(frame_servidor, "Bebida actualizada exitosamente");
-            js_cantidad_bebida.setValue(0);
-            jt_nombre_bebida.setText("");
-            jt_precio_bebida.setText("");
-            jt_descripción_bebida.setText("");
-        }else{
-            if(table_bebida.getRowCount()==0){
-                JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-            }else{
-                JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para actualizar");
-            }
-        }
-    }//GEN-LAST:event_bt_modificar_bebidaMouseClicked
-
-    private void bt_agregar_bebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregar_bebidaMouseClicked
-         if(((Integer)js_cantidad_bebida.getValue()<=0) || jt_nombre_bebida.getText().equals("") ||jt_precio_bebida.getText().equals("") || jt_descripción_bebida.getText().equals("")){
+          if(((Integer)js_cantidad_bebida.getValue()<=0) || jt_nombre_bebida.getText().equals("")|| jt_precio_bebida.getText().equals("") || jt_descripción_bebida.getText().equals("")){
             JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
         }else{
-            //validad si ya esta agregado
-             try {
-                   String data[]={Integer.toString((Integer)js_cantidad_bebida.getValue()),jt_nombre_bebida.getText(),jt_precio_bebida.getText(),jt_descripción_bebida.getText()};
-                DefaultTableModel tblModel=(DefaultTableModel)table_bebida.getModel();
-                tblModel.addRow(data);
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+                tblModel.addRow(data);*/
                 
                 int cantidad=(Integer)js_cantidad_bebida.getValue();
                 String nombre=jt_nombre_bebida.getText();
                 String descripcion=jt_descripción_bebida.getText();
                 float precio=Float.parseFloat(jt_precio_bebida.getText());
-                Bebida b =new Bebida(cantidad,nombre,descripcion,precio);
-                bebidas.add(b);
                 
-                JOptionPane.showMessageDialog(frame_servidor, "Bebida agregada exitosamente");
-             } catch (Exception e) {
-             }
-              
-            
-            
-            
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("UPDATE Inventario SET Nombre=? ,Descripcion=?,Precio=?,Cantidad=? "
+                            + "WHERE Nombre=? ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, nombresito_bebida);
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
             js_cantidad_bebida.setValue(0);
-            jt_nombre_bebida.setText("");
             jt_precio_bebida.setText("");
+            jt_nombre_bebida.setText("");
             jt_descripción_bebida.setText("");
+            
+        }
+    }//GEN-LAST:event_bt_modificar_bebidaMouseClicked
+
+    private void bt_agregar_bebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregar_bebidaMouseClicked
+        if(((Integer)js_cantidad_bebida.getValue()<=0) || jt_nombre_bebida.getText().equals("")|| jt_precio_bebida.getText().equals("") || jt_descripción_bebida.getText().equals("")){
+            JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
+        }else{
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+                tblModel.addRow(data);*/
+                
+                int cantidad=(Integer)js_cantidad_bebida.getValue();
+                String nombre=jt_nombre_bebida.getText();
+                String descripcion=jt_descripción_bebida.getText();
+                float precio=Float.parseFloat(jt_precio_bebida.getText());
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    System.out.println("pasoooo");
+                    PreparedStatement ps=con.prepareStatement("INSERT INTO Inventario (Nombre,Descripcion,Precio,Cantidad,Categoria) "
+                            + "VALUES (?,?,?,?,?) ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, "comida");
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_comida.setValue(0);
+            jt_precio_comida.setText("");
+            jt_nombre_comida.setText("");
+            jt_descripción_comida.setText("");
             
         }
     }//GEN-LAST:event_bt_agregar_bebidaMouseClicked
 
     private void bt_eliminar_postreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminar_postreActionPerformed
-        DefaultTableModel tblModel=(DefaultTableModel)table_postre.getModel();
-       if(table_postre.getSelectedRowCount()==1){
-           String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-    
-           tblModel.removeRow(table_postre.getSelectedRow());
+      String nombr2e=jt_nombre_postre.getText();
           
-           for (int i = 0; i < postres.size(); i++) {
-               if(postres.get(i).getNombre().equals(nombretemp)){
-                   postres.remove(i);
-                   break;
-               }
-           }
-           
-           JOptionPane.showMessageDialog(frame_servidor, "Postre eliminado exitosamente");
-       }else{
-           if(table_postre.getRowCount()==0){
-               //empty
-               JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-           }else{
-               //no empty pero no esta seleccionado
-               JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para eliminar");
-           }
-       }
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+                
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("DELETE Inventario WHERE Nombre=?");
+                    ps.setString(1, nombr2e);
+                    ps.executeUpdate();
+                    
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_postre.setValue(0);
+            jt_precio_postre.setText("");
+            jt_nombre_postre.setText("");
+            jt_descripción_postre.setText("");
+            
+        
     }//GEN-LAST:event_bt_eliminar_postreActionPerformed
 
     private void bt_modificar_postreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificar_postreMouseClicked
-        DefaultTableModel tblModel=(DefaultTableModel)table_postre.getModel();
-        
-        if(table_postre.getSelectedRowCount()==1){
-            String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-            
-            String cantidad=Integer.toString((Integer)js_cantidad_postre.getValue());
-            String nombre=jt_nombre_postre.getText();
-            String precio=jt_precio_postre.getText();
-            String descripcion=jt_descripción_postre.getText();
-            
-            tblModel.setValueAt(cantidad,table_postre.getSelectedRow(),0);
-            tblModel.setValueAt(nombre,table_postre.getSelectedRow(),1);
-            tblModel.setValueAt(precio,table_postre.getSelectedRow(),2);
-            tblModel.setValueAt(descripcion,table_postre.getSelectedRow(),3);
-            
-            try {
-                for (int i = 0; i < postres.size(); i++) {
-                    if(postres.get(i).getNombre().equals(nombretemp)){
-                        postres.get(i).setCantidad((Integer)js_cantidad_postre.getValue());
-                        postres.get(i).setNombre(jt_nombre_postre.getText());
-                        postres.get(i).setPrecio(Float.parseFloat(jt_precio_postre.getText()));
-                        postres.get(i).setDescripción(jt_descripción_postre.getText());
-                    }
-                }
-            } catch (Exception e) {
-            }
-            
-            JOptionPane.showMessageDialog(frame_servidor, "Postre actualizado exitosamente");
-            js_cantidad_postre.setValue(0);
-            jt_nombre_postre.setText("");
-            jt_precio_postre.setText("");
-            jt_descripción_postre.setText("");
-        }else{
-            if(table_postre.getRowCount()==0){
-                JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-            }else{
-                JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para actualizar");
-            }
-        }
-    }//GEN-LAST:event_bt_modificar_postreMouseClicked
-
-    private void bt_agregar_postreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregar_postreMouseClicked
-        if(((Integer)js_cantidad_postre.getValue()<=0) || jt_nombre_postre.getText().equals("") || jt_precio_postre.getText().equals("")|| jt_descripción_postre.getText().equals("")){
+          if(((Integer)js_cantidad_postre.getValue()<=0) || jt_nombre_postre.getText().equals("")|| jt_precio_postre.getText().equals("") || jt_descripción_postre.getText().equals("")){
             JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
         }else{
-            //validad si ya esta agregado
-            //VALIDAR BIEN ESTOOOOO DESPUES
-            
+            //validad si ya esta agregado en la base de datos
             try {
-                String data[]={Integer.toString((Integer)js_cantidad_postre.getValue()),jt_nombre_postre.getText(),jt_precio_postre.getText(),jt_descripción_postre.getText()};
-                DefaultTableModel tblModel=(DefaultTableModel)table_postre.getModel();
-                tblModel.addRow(data);
+                
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+                tblModel.addRow(data);*/
                 
                 int cantidad=(Integer)js_cantidad_postre.getValue();
                 String nombre=jt_nombre_postre.getText();
                 String descripcion=jt_descripción_postre.getText();
                 float precio=Float.parseFloat(jt_precio_postre.getText());
-                Postre p=new Postre(cantidad,nombre,descripcion,precio);
-                postres.add(p);
                 
-                JOptionPane.showMessageDialog(frame_servidor, "Postre agregado exitosamente");
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("UPDATE Inventario SET Nombre=? ,Descripcion=?,Precio=?,Cantidad=? "
+                            + "WHERE Nombre=? ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, nombresito_postre);
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
             } catch (Exception e) {
-            }
                 
-            
-            
-            
+            }
             js_cantidad_postre.setValue(0);
-            jt_nombre_postre.setText("");
             jt_precio_postre.setText("");
+            jt_nombre_postre.setText("");
             jt_descripción_postre.setText("");
             
         }
-    }//GEN-LAST:event_bt_agregar_postreMouseClicked
+    }//GEN-LAST:event_bt_modificar_postreMouseClicked
+
+    private void bt_agregar_postreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregar_postreMouseClicked
+        if(((Integer)js_cantidad_postre.getValue()<=0) || jt_nombre_postre.getText().equals("")|| jt_precio_postre.getText().equals("") || jt_descripción_postre.getText().equals("")){
+            JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
+        }else{
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+                tblModel.addRow(data);*/
+                
+                int cantidad=(Integer)js_cantidad_postre.getValue();
+                String nombre=jt_nombre_postre.getText();
+                String descripcion=jt_descripción_postre.getText();
+                float precio=Float.parseFloat(jt_precio_postre.getText());
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    System.out.println("pasoooo");
+                    PreparedStatement ps=con.prepareStatement("INSERT INTO Inventario (Nombre,Descripcion,Precio,Cantidad,Categoria) "
+                            + "VALUES (?,?,?,?,?) ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, "comida");
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_postre.setValue(0);
+            jt_precio_postre.setText("");
+            jt_nombre_postre.setText("");
+            jt_descripción_postre.setText("");
+            
+        }    }//GEN-LAST:event_bt_agregar_postreMouseClicked
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
 
@@ -1449,7 +1584,8 @@ MesasDialog.pack();        // TODO add your handling code here:
     
     int cont_numplato=1;
     
-    String nombresito_comida="";
+    String nombresito_comida="",nombresito_bebida="",nombresito_postre="";
+    
     
     
     private void cargarTablacomida(){
