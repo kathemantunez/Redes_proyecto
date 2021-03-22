@@ -5,7 +5,12 @@
  */
 package redes_restaurante;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
+import javax.naming.spi.DirStateFactory.Result;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -27,6 +32,7 @@ public class Principal extends javax.swing.JFrame {
                 
         cierre.setEnabled(false);
         //cierre.setVisible(false);
+        cargarTablacomida();
     }
     
     
@@ -697,6 +703,7 @@ public class Principal extends javax.swing.JFrame {
         login_servidor.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
+    
     private void bt_agregar_comidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregar_comidaMouseClicked
         if(((Integer)js_cantidad_comida.getValue()<=0) || jt_nombre_comida.getText().equals("")|| jt_precio_comida.getText().equals("") || jt_descripción_comida.getText().equals("")){
             JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
@@ -704,18 +711,41 @@ public class Principal extends javax.swing.JFrame {
             //validad si ya esta agregado en la base de datos
             try {
                 
-                String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
                 DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
-                tblModel.addRow(data);
+                tblModel.addRow(data);*/
                 
                 int cantidad=(Integer)js_cantidad_comida.getValue();
                 String nombre=jt_nombre_comida.getText();
                 String descripcion=jt_descripción_comida.getText();
                 float precio=Float.parseFloat(jt_precio_comida.getText());
-                Comida c=new Comida(cantidad,nombre,descripcion,precio);
-                comidas.add(c);
                 
-                JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    System.out.println("pasoooo");
+                    PreparedStatement ps=con.prepareStatement("INSERT INTO Inventario (Nombre,Descripcion,Precio,Cantidad,Categoria) "
+                            + "VALUES (?,?,?,?,?) ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, "comida");
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida agregada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
             } catch (Exception e) {
                 
             }
@@ -728,7 +758,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_agregar_comidaMouseClicked
 
     private void bt_eliminar_comidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminar_comidaActionPerformed
-       DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+      /* DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
        if(table_comida.getSelectedRowCount()==1){
            String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
            
@@ -751,11 +781,46 @@ public class Principal extends javax.swing.JFrame {
                //no empty pero no esta seleccionado
                JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para eliminar");
            }
-       }
+       }*/
+      String nombr2e=jt_nombre_comida.getText();
+          
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+                
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("DELETE Inventario WHERE Nombre=?");
+                    ps.setString(1, nombr2e);
+                    ps.executeUpdate();
+                    
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_comida.setValue(0);
+            jt_precio_comida.setText("");
+            jt_nombre_comida.setText("");
+            jt_descripción_comida.setText("");
+            
+        
     }//GEN-LAST:event_bt_eliminar_comidaActionPerformed
 
     private void bt_modificar_comidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificar_comidaMouseClicked
-        DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+/*        DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
         
         if(table_comida.getSelectedRowCount()==1){
             String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
@@ -794,23 +859,98 @@ public class Principal extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para actualizar");
             }
+        }*/
+          //String nombre2=jt_nombre_comida.getText();
+          if(((Integer)js_cantidad_comida.getValue()<=0) || jt_nombre_comida.getText().equals("")|| jt_precio_comida.getText().equals("") || jt_descripción_comida.getText().equals("")){
+            JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
+        }else{
+            //validad si ya esta agregado en la base de datos
+            try {
+                
+               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
+                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
+                tblModel.addRow(data);*/
+                
+                int cantidad=(Integer)js_cantidad_comida.getValue();
+                String nombre=jt_nombre_comida.getText();
+                String descripcion=jt_descripción_comida.getText();
+                float precio=Float.parseFloat(jt_precio_comida.getText());
+                
+                //BASE DE DATOS
+                try {
+                    Connection con=Conexion.getConnection();
+                    PreparedStatement ps=con.prepareStatement("UPDATE Inventario SET Nombre=? ,Descripcion=?,Precio=?,Cantidad=? "
+                            + "WHERE Nombre=? ");
+                    ps.setString(1, nombre);
+                    ps.setString(2, descripcion);
+                    ps.setFloat(3, precio);
+                    ps.setInt(4, cantidad);
+                    ps.setString(5, nombresito_comida);
+                    
+                    
+                    ps.executeUpdate();
+                    cargarTablacomida();
+                    JOptionPane.showMessageDialog(frame_servidor, "Comida modificada exitosamente");
+                    
+                    
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+                
+                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
+                //comidas.add(c);
+                
+                
+            } catch (Exception e) {
+                
+            }
+            js_cantidad_comida.setValue(0);
+            jt_precio_comida.setText("");
+            jt_nombre_comida.setText("");
+            jt_descripción_comida.setText("");
+            
         }
-        
-        
     }//GEN-LAST:event_bt_modificar_comidaMouseClicked
 
     private void table_comidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_comidaMouseClicked
         DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
         
-        String cantidad=tblModel.getValueAt(table_comida.getSelectedRow(), 0).toString();
-        String nombre=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-        String precio=tblModel.getValueAt(table_comida.getSelectedRow(), 2).toString();
-        String descripcion=tblModel.getValueAt(table_comida.getSelectedRow(), 3).toString();
+        String cantidad="";
+        String nombre="";
+        String precio="";
+        String descripcion="";
+        try {
+            int fila=table_comida.getSelectedRow();
+            String idnombre=table_comida.getValueAt(fila, 1).toString();
+            
+            PreparedStatement ps;
+            ResultSet rs;
+            
+            Connection con=Conexion.getConnection();
+            ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Nombre=?");
+            ps.setString(1, idnombre);
+            rs= ps.executeQuery();
+            
+            while( rs.next()){
+                cantidad=rs.getString("Cantidad");
+                nombre=rs.getString("Nombre");
+                precio=rs.getString("Precio");
+                descripcion=rs.getString("Descripcion");
+                
+            }
+            
+            cargarTablacomida();
+            js_cantidad_comida.setValue(Integer.parseInt(cantidad));
+            nombresito_comida=nombre;
+             jt_nombre_comida.setText(nombre);
+            jt_precio_comida.setText(precio);
+            jt_descripción_comida.setText(descripcion);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
         
-        js_cantidad_comida.setValue(Integer.parseInt(cantidad));
-        jt_nombre_comida.setText(nombre);
-        jt_precio_comida.setText(precio);
-        jt_descripción_comida.setText(descripcion);
+        
     }//GEN-LAST:event_table_comidaMouseClicked
 
     private void table_bebidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_bebidaMouseClicked
@@ -1307,4 +1447,46 @@ MesasDialog.pack();        // TODO add your handling code here:
     ArrayList<Bebida> bebidas=new ArrayList();
     ArrayList<Postre> postres=new ArrayList();
     
+    int cont_numplato=1;
+    
+    String nombresito_comida="";
+    
+    
+    private void cargarTablacomida(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)table_comida.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < table_comida.getColumnCount(); i++) {
+            table_comida.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
+    }
 }
