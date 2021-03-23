@@ -35,6 +35,9 @@ public class Principal extends javax.swing.JFrame {
         cargarTablacomida();
         cargarTablaPostre();
         cargarTablaBebidas();
+        
+        
+        //solo para commit -m
     }
     
     
