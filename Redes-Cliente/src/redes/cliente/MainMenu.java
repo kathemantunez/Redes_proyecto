@@ -262,6 +262,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel101 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
         jPanel20.setPreferredSize(new java.awt.Dimension(1200, 800));
@@ -277,6 +278,8 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(l_ordenes);
+
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/Logo.jpg"))); // NOI18N
 
         jLabel76.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel76.setText("Orden");
@@ -359,7 +362,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(j_total))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(b_atrasOrden)
                     .addComponent(jButton21)
@@ -373,34 +376,32 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout j_ordenesLayout = new javax.swing.GroupLayout(j_ordenes.getContentPane());
         j_ordenes.getContentPane().setLayout(j_ordenesLayout);
         j_ordenesLayout.setHorizontalGroup(
             j_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(j_ordenesLayout.createSequentialGroup()
-                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         j_ordenesLayout.setVerticalGroup(
             j_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         j_pago.setMinimumSize(new java.awt.Dimension(1200, 800));
 
         jPanel21.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/Logo.jpg"))); // NOI18N
 
         jLabel91.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel91.setText("Recibo");
@@ -576,6 +577,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PEPPERONI O JAMON LOVERS.jpg"))); // NOI18N
+
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel53.setText("PEPPERONI O JAMÓN LOVERS");
 
@@ -642,6 +645,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_pepperoni)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/4 estaciones.jpg"))); // NOI18N
 
         jLabel71.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel71.setText("4 ESTACIONES");
@@ -715,6 +720,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_estaciones)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/CANADIENSE.jpg"))); // NOI18N
 
         jLabel108.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel108.setText("CANADIENSE");
@@ -863,6 +870,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/AGUAZUL.png"))); // NOI18N
+
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel55.setText("AGUAZUL 20 OZ.");
 
@@ -922,6 +931,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/7 500 ML.png"))); // NOI18N
+
         jLabel115.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel115.setText("7 UP 1/2 L.");
 
@@ -980,6 +991,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_7up)))
                 .addGap(29, 29, 29))
         );
+
+        jLabel120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PEPSI 500 ML.png"))); // NOI18N
 
         jLabel121.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel121.setText("PEPSI 1/2 L.");
@@ -1067,7 +1080,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
@@ -1108,6 +1121,8 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel31.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PECHURRRICAS.png"))); // NOI18N
 
         jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel58.setText("PECHURRICAS");
@@ -1182,6 +1197,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
+        jLabel117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PAN DE AJO.png"))); // NOI18N
+
         jLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel122.setText("PAN DE AJO SUPREMO");
 
@@ -1246,6 +1263,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_ajo)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/HUT WINGS.png"))); // NOI18N
 
         jLabel130.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel130.setText("HUT WINGS");
@@ -1389,6 +1408,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/Chicken Buffalo Ranch.png"))); // NOI18N
+
         jLabel136.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel136.setText("CHICKEN BUFFALO RANCH");
 
@@ -1467,6 +1488,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
+        jLabel140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/CALZONE 3.png"))); // NOI18N
+
         jLabel141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel141.setText("CALZONE MEAT LOVERS");
 
@@ -1539,6 +1562,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_lovers)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/CALZONE SUPREMO.png"))); // NOI18N
 
         jLabel147.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel147.setText("CALZONE SUPREMO");
@@ -1682,6 +1707,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel154.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
+        jLabel159.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/GALLETA.png"))); // NOI18N
+
         jLabel160.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel160.setText("HERSHEY´S CHOCOLATE CHIP");
 
@@ -1754,6 +1781,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_galleta)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PECAN PIE.png"))); // NOI18N
 
         jLabel166.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel166.setText("PECAN PIE");
@@ -1895,6 +1924,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel155.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/Pechu Pack.png"))); // NOI18N
+
         jLabel156.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel156.setText("PECHU PACK");
 
@@ -1973,6 +2004,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(11, 11, 11))
         );
 
+        jLabel172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/Wow Box.png"))); // NOI18N
+
         jLabel173.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel173.setText("WOW BOX");
 
@@ -2045,6 +2078,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(s_wow)))
                 .addGap(11, 11, 11))
         );
+
+        jLabel178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/PAQUETEMIX.png"))); // NOI18N
 
         jLabel179.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel179.setText("HUT PACK");
@@ -2236,8 +2271,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(1200, 800));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1200, 800));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/Logo.jpg"))); // NOI18N
 
@@ -2248,6 +2286,7 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redes/cliente/wallpaper food.jpg"))); // NOI18N
 
         jLabel99.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/pizza.png"))); // NOI18N
         jLabel99.setText("   Pizzas");
         jLabel99.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2256,6 +2295,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel98.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/soft-drink.png"))); // NOI18N
         jLabel98.setText("   Bebidas");
         jLabel98.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2264,6 +2304,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel100.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/cake.png"))); // NOI18N
         jLabel100.setText("   Postres");
         jLabel100.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2272,6 +2313,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel101.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/fried-chicken.png"))); // NOI18N
         jLabel101.setText("   Entradas");
         jLabel101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2280,6 +2322,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel102.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/calzone.png"))); // NOI18N
         jLabel102.setText("   Calzone");
         jLabel102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2288,12 +2331,17 @@ public class MainMenu extends javax.swing.JFrame {
         });
 
         jLabel103.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos Pizza Hut/discount.png"))); // NOI18N
         jLabel103.setText("   Promos");
         jLabel103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel103MouseClicked(evt);
             }
         });
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("jLabel5");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -2320,6 +2368,10 @@ public class MainMenu extends javax.swing.JFrame {
                             .addComponent(jLabel101)
                             .addComponent(jLabel103))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(559, 559, 559)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2338,7 +2390,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel100)
                     .addComponent(jLabel103))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel96, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2373,9 +2427,6 @@ public class MainMenu extends javax.swing.JFrame {
         String nombre = "CANADIENSE";
         int precio = 280;
         int cantidad = (int) s_canadiense.getValue();
-
-       
-       
         
         PreparedStatement ps,ps1;
         ResultSet rs;
@@ -2403,10 +2454,7 @@ public class MainMenu extends javax.swing.JFrame {
               }else{
                   JOptionPane.showMessageDialog(j_pizzas, "CANTIDAD INVALIDA\nNo hay la cantidad de producto que desea");
                }
-             
-            
-             
-             
+   
         } catch (Exception e) {
         }
     }//GEN-LAST:event_b_canadienseMouseClicked
@@ -3269,7 +3317,7 @@ public class MainMenu extends javax.swing.JFrame {
         b_pagar.setVisible(false);
 
         Random r = new Random();
-        int ran = 1 + r.nextInt() + 100;
+        int ran = (1 + r.nextInt(100)) * 100;
         double impuesto = total * 0.15;
         double subtotal = total - impuesto;
         String recibo = "Orden: " + Integer.toString(ran) + "\n \n";
@@ -3594,6 +3642,7 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
