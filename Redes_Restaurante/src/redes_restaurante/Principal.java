@@ -111,14 +111,14 @@ public class Principal extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        mesa2 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        mesa4 = new javax.swing.JButton();
+        mesa5 = new javax.swing.JButton();
+        mesa3 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        mesa1 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
@@ -139,7 +139,7 @@ public class Principal extends javax.swing.JFrame {
         MesasDialog = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        Cantidad = new javax.swing.JTable();
+        tabla_mesas = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
@@ -479,13 +479,13 @@ public class Principal extends javax.swing.JFrame {
         });
         MESAS.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, -1, -1));
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        mesa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
+        mesa2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                mesa2ActionPerformed(evt);
             }
         });
-        MESAS.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, -1, -1));
+        MESAS.add(mesa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, -1, -1));
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/chair.png"))); // NOI18N
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -503,40 +503,40 @@ public class Principal extends javax.swing.JFrame {
         });
         MESAS.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 250, -1, -1));
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        mesa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
+        mesa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                mesa4ActionPerformed(evt);
             }
         });
-        MESAS.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+        MESAS.add(mesa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        mesa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
+        mesa5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                mesa5ActionPerformed(evt);
             }
         });
-        MESAS.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
+        MESAS.add(mesa5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        mesa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
+        mesa3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                mesa3ActionPerformed(evt);
             }
         });
-        MESAS.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
+        MESAS.add(mesa3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
 
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/order-food.png"))); // NOI18N
         MESAS.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        mesa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/meeting (1).png"))); // NOI18N
+        mesa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                mesa1ActionPerformed(evt);
             }
         });
-        MESAS.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, -1, -1));
+        MESAS.add(mesa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, -1, -1));
 
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/order-food.png"))); // NOI18N
         MESAS.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
@@ -625,7 +625,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel23.setText("GESTION DE MESA");
         MesasDialog.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
 
-        Cantidad.setModel(new javax.swing.table.DefaultTableModel(
+        tabla_mesas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -636,7 +636,7 @@ public class Principal extends javax.swing.JFrame {
                 "Producto ", "Cantidad", "Precio"
             }
         ));
-        jScrollPane8.setViewportView(Cantidad);
+        jScrollPane8.setViewportView(tabla_mesas);
 
         MesasDialog.getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 508, 211));
 
@@ -696,12 +696,7 @@ public class Principal extends javax.swing.JFrame {
         if(((Integer)js_cantidad_comida.getValue()<=0) || jt_nombre_comida.getText().equals("")|| jt_precio_comida.getText().equals("") || jt_descripción_comida.getText().equals("")){
             JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
         }else{
-            //validad si ya esta agregado en la base de datos
             try {
-                
-               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
-                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
-                tblModel.addRow(data);*/
                 
                 int cantidad=(Integer)js_cantidad_comida.getValue();
                 String nombre=jt_nombre_comida.getText();
@@ -729,11 +724,6 @@ public class Principal extends javax.swing.JFrame {
                 } catch (Exception e) {
                     System.out.println(e.toString());
                 }
-                
-                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
-                //comidas.add(c);
-                
-                
             } catch (Exception e) {
                 
             }
@@ -746,38 +736,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_agregar_comidaMouseClicked
 
     private void bt_eliminar_comidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_eliminar_comidaActionPerformed
-      /* DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
-       if(table_comida.getSelectedRowCount()==1){
-           String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-           
-           tblModel.removeRow(table_comida.getSelectedRow());
-           
-           for (int i = 0; i < comidas.size(); i++) {
-               if(comidas.get(i).getNombre().equals(nombretemp)){
-                   comidas.remove(i);
-                   break;
-               }
-           }
-           
-           
-           JOptionPane.showMessageDialog(frame_servidor, "Comida eliminada exitosamente");
-       }else{
-           if(table_comida.getRowCount()==0){
-               //empty
-               JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-           }else{
-               //no empty pero no esta seleccionado
-               JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para eliminar");
-           }
-       }*/
+      
       String nombr2e=jt_nombre_comida.getText();
           
             //validad si ya esta agregado en la base de datos
             try {
-                
-                
-                
-                //BASE DE DATOS
                 try {
                     Connection con=Conexion.getConnection();
                     PreparedStatement ps=con.prepareStatement("DELETE Inventario WHERE Nombre=?");
@@ -791,11 +754,6 @@ public class Principal extends javax.swing.JFrame {
                 } catch (Exception e) {
                     System.out.println(e.toString());
                 }
-                
-                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
-                //comidas.add(c);
-                
-                
             } catch (Exception e) {
                 
             }
@@ -808,57 +766,13 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_eliminar_comidaActionPerformed
 
     private void bt_modificar_comidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificar_comidaMouseClicked
-/*        DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
-        
-        if(table_comida.getSelectedRowCount()==1){
-            String nombretemp=tblModel.getValueAt(table_comida.getSelectedRow(), 1).toString();
-            
-            String cantidad=Integer.toString((Integer)js_cantidad_comida.getValue());
-            String nombre=jt_nombre_comida.getText();
-            String precio=jt_precio_comida.getText();
-            String descripcion=jt_descripción_comida.getText();
-            
-            tblModel.setValueAt(cantidad,table_comida.getSelectedRow(),0);
-            tblModel.setValueAt(nombre,table_comida.getSelectedRow(),1);
-            tblModel.setValueAt(precio,table_comida.getSelectedRow(),2);
-            tblModel.setValueAt(descripcion,table_comida.getSelectedRow(),3);
-            
-            try {
-                for (int i = 0; i < comidas.size(); i++) {
-                    if(comidas.get(i).getNombre().equals(nombretemp)){
-                        comidas.get(i).setCantidad((Integer)js_cantidad_comida.getValue());
-                        comidas.get(i).setNombre(jt_nombre_comida.getText());
-                        comidas.get(i).setPrecio(Float.parseFloat(jt_precio_comida.getText()));
-                        comidas.get(i).setDescripción(jt_descripción_comida.getText());
-                    }
-                }
-            } catch (Exception e) {
-            }
-            
-            
-            JOptionPane.showMessageDialog(frame_servidor, "Comida actualizada exitosamente");
-            js_cantidad_comida.setValue(0);
-            jt_precio_comida.setText("");
-            jt_nombre_comida.setText("");
-            jt_descripción_comida.setText("");
-        }else{
-            if(table_comida.getRowCount()==0){
-                JOptionPane.showMessageDialog(frame_servidor, "La tabla esta vacia");
-            }else{
-                JOptionPane.showMessageDialog(frame_servidor, "Seleccione alguna fila para actualizar");
-            }
-        }*/
+
           //String nombre2=jt_nombre_comida.getText();
           if(((Integer)js_cantidad_comida.getValue()<=0) || jt_nombre_comida.getText().equals("")|| jt_precio_comida.getText().equals("") || jt_descripción_comida.getText().equals("")){
             JOptionPane.showMessageDialog(frame_servidor, "Por favor, introducir todos los datos");
         }else{
             //validad si ya esta agregado en la base de datos
             try {
-                
-               /* String data[]={Integer.toString((Integer)js_cantidad_comida.getValue()),jt_nombre_comida.getText(),jt_precio_comida.getText(),jt_descripción_comida.getText()};
-                DefaultTableModel tblModel=(DefaultTableModel)table_comida.getModel();
-                tblModel.addRow(data);*/
-                
                 int cantidad=(Integer)js_cantidad_comida.getValue();
                 String nombre=jt_nombre_comida.getText();
                 String descripcion=jt_descripción_comida.getText();
@@ -884,11 +798,6 @@ public class Principal extends javax.swing.JFrame {
                 } catch (Exception e) {
                     System.out.println(e.toString());
                 }
-                
-                //Comida c=new Comida(cantidad,nombre,descripcion,precio);
-                //comidas.add(c);
-                
-                
             } catch (Exception e) {
                 
             }
@@ -1367,31 +1276,37 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void mesa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesa4ActionPerformed
 MesasDialog.setVisible(true);
-MesasDialog.pack();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+MesasDialog.pack();   
+llenartablamesa4();// TODO add your handling code here:
+    }//GEN-LAST:event_mesa4ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void mesa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesa1ActionPerformed
 MesasDialog.setVisible(true);
 MesasDialog.pack();
+//AQUÍ
+llenartablamesa1();
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_mesa1ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void mesa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesa2ActionPerformed
 MesasDialog.setVisible(true);
-MesasDialog.pack();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+MesasDialog.pack(); 
+llenartablamesa2();// TODO add your handling code here:
+    }//GEN-LAST:event_mesa2ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void mesa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesa3ActionPerformed
 MesasDialog.setVisible(true);
-MesasDialog.pack();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+MesasDialog.pack(); 
+llenartablamesa3();// TODO add your handling code here:
+    }//GEN-LAST:event_mesa3ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void mesa5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesa5ActionPerformed
 MesasDialog.setVisible(true);
-MesasDialog.pack();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+MesasDialog.pack();  
+llenartablamesa5();// TODO add your handling code here:
+    }//GEN-LAST:event_mesa5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
 MesasDialog.setVisible(true);
@@ -1464,7 +1379,6 @@ MesasDialog.pack();        // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JTable Cantidad;
     private javax.swing.JTabbedPane INVENTARIO;
     private javax.swing.JPanel JFBebidas;
     private javax.swing.JPanel JFComidas;
@@ -1492,11 +1406,7 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
@@ -1509,7 +1419,6 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1556,7 +1465,13 @@ MesasDialog.pack();        // TODO add your handling code here:
     private javax.swing.JTextField jt_precio_postre;
     private javax.swing.JDialog login_servidor;
     private javax.swing.JButton logout;
+    private javax.swing.JButton mesa1;
+    private javax.swing.JButton mesa2;
+    private javax.swing.JButton mesa3;
+    private javax.swing.JButton mesa4;
+    private javax.swing.JButton mesa5;
     private javax.swing.JTextField pas;
+    private javax.swing.JTable tabla_mesas;
     private javax.swing.JTable table_actual;
     private javax.swing.JTable table_bebida;
     private javax.swing.JTable table_comida;
@@ -1568,6 +1483,7 @@ MesasDialog.pack();        // TODO add your handling code here:
     ArrayList<Postre> postres=new ArrayList();
     
     int cont_numplato=1;
+    int cont_numpedido=1;
     
     String nombresito_comida="",nombresito_bebida="",nombresito_postre="";
     
@@ -1576,23 +1492,17 @@ MesasDialog.pack();        // TODO add your handling code here:
     private void cargarTablacomida(){
         DefaultTableModel modeloTabla=(DefaultTableModel)table_comida.getModel();
         modeloTabla.setRowCount(0);
-        
         PreparedStatement ps;
         ResultSet rs;
         ResultSetMetaData rsmd;
         int columnas;
-        
         int[] anchos={100,100,100,100};
         for (int i = 0; i < table_comida.getColumnCount(); i++) {
             table_comida.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
-            
         }
-        
-        
         try {
              Connection con=Conexion.getConnection();
              ps=con.prepareStatement("SELECT Cantidad,Nombre,Precio,Descripcion FROM Inventario WHERE Categoria='comida'");
-             
              rs=ps.executeQuery();
              rsmd=rs.getMetaData();
              columnas=rsmd.getColumnCount();
@@ -1682,6 +1592,191 @@ MesasDialog.pack();        // TODO add your handling code here:
              
         } catch (Exception e) {
             JOptionPane.showMessageDialog(frame_servidor, e.toString());
+        }
+    }
+private void llenartablamesa1(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)tabla_mesas.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < tabla_mesas.getColumnCount(); i++) {
+            tabla_mesas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Nombre_Producto,Cantidad, Precio FROM DETALLE_PEDIDO WHERE ID_mesa=1");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MesasDialog, e.toString());
+        }
+    }
+private void llenartablamesa2(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)tabla_mesas.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < tabla_mesas.getColumnCount(); i++) {
+            tabla_mesas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Nombre_Producto,Cantidad, Precio FROM DETALLE_PEDIDO WHERE ID_mesa=2");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MesasDialog, e.toString());
+        }
+    }
+private void llenartablamesa3(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)tabla_mesas.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < tabla_mesas.getColumnCount(); i++) {
+            tabla_mesas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Nombre_Producto,Cantidad, Precio FROM DETALLE_PEDIDO WHERE ID_mesa=3");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MesasDialog, e.toString());
+        }
+    }
+private void llenartablamesa4(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)tabla_mesas.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < tabla_mesas.getColumnCount(); i++) {
+            tabla_mesas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Nombre_Producto,Cantidad, Precio FROM DETALLE_PEDIDO WHERE ID_mesa=4");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MesasDialog, e.toString());
+        }
+    }
+private void llenartablamesa5(){
+        DefaultTableModel modeloTabla=(DefaultTableModel)tabla_mesas.getModel();
+        modeloTabla.setRowCount(0);
+        
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+        int columnas;
+        
+        int[] anchos={100,100,100,100};
+        for (int i = 0; i < tabla_mesas.getColumnCount(); i++) {
+            tabla_mesas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+            
+        }
+        
+        
+        try {
+             Connection con=Conexion.getConnection();
+             ps=con.prepareStatement("SELECT Nombre_Producto,Cantidad, Precio FROM DETALLE_PEDIDO WHERE ID_mesa=5");
+             
+             rs=ps.executeQuery();
+             rsmd=rs.getMetaData();
+             columnas=rsmd.getColumnCount();
+             
+             while(rs.next()){
+                 Object[] fila=new Object[columnas];
+                 for (int i = 0; i < columnas; i++) {
+                     fila[i]=rs.getObject(i+1);
+                 }
+                 modeloTabla.addRow(fila);
+             }
+             
+             
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MesasDialog, e.toString());
         }
     }
 }

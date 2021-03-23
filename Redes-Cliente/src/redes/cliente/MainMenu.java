@@ -362,7 +362,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(j_total))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(b_atrasOrden)
                     .addComponent(jButton21)
@@ -3301,8 +3301,18 @@ public class MainMenu extends javax.swing.JFrame {
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         JOptionPane.showMessageDialog(j_pago, "Pronto llegara un mesero a atenderlo. Gracias!");
         pedidos.removeAll(pedidos);
+        pedidos.clear();
             total = 0;
             ordenSeleccionada = null;
+            j_pago.setVisible(false);
+
+            j_ordenes.setVisible(false);
+            j_pizzas.setVisible(false);
+            j_bebidas.setVisible(false);
+            j_entradas.setVisible(false);
+            j_calzone.setVisible(false);
+            j_postre.setVisible(false);
+            j_promo.setVisible(false);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void b_pagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_pagoMouseClicked
@@ -3380,6 +3390,7 @@ public class MainMenu extends javax.swing.JFrame {
             pedidos.removeAll(pedidos);
             total = 0;
             ordenSeleccionada = null;
+            pedidos.clear();
         }
     }//GEN-LAST:event_b_pagarMouseClicked
 
@@ -3405,7 +3416,7 @@ public class MainMenu extends javax.swing.JFrame {
                 ps.setDouble(4, (double)pedidos.get(i).getPrecio());
                 ps.setInt(5,1);
                 ps.setString(6, "Comer en restaurante");
-                ps.setInt(7, 1);
+                ps.setInt(7, cont_pedido_mesa);
                 
                 ps.executeUpdate();
                 
@@ -3427,6 +3438,7 @@ public class MainMenu extends javax.swing.JFrame {
         b_atrasOrden.setEnabled(false);
         b_menup.setEnabled(false);
         jButton21.setEnabled(false);
+        cont_pedido_mesa++;
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -3444,7 +3456,7 @@ public class MainMenu extends javax.swing.JFrame {
                 ps.setDouble(4, (double)pedidos.get(i).getPrecio());
                 ps.setInt(5,1);
                 ps.setString(6, "Para llevar");
-                ps.setInt(7, 1);
+                ps.setInt(7, cont_pedido_llevar);
                 
                 ps.executeUpdate();
                 
@@ -3464,6 +3476,7 @@ public class MainMenu extends javax.swing.JFrame {
         b_atrasOrden.setEnabled(false);
         b_menup.setEnabled(false);
         jButton21.setEnabled(false);
+        cont_pedido_llevar++;
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void l_ordenesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_ordenesMouseEntered
@@ -3742,4 +3755,6 @@ public class MainMenu extends javax.swing.JFrame {
     int total = 0;
     
     int id_pedido_actual;
+    int cont_pedido_mesa=1;
+    int cont_pedido_llevar=1;
 }

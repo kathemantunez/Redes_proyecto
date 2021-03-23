@@ -19,20 +19,7 @@ import javax.swing.JOptionPane;
 public class Conexion {
     static Connection contacto=null;
     public static Connection getConnection() throws ClassNotFoundException,SQLException{
-       /*String url="jdbc:sqlserver://KATHERINE\\MSSQLSERVER01:1433;databaseName=Pizza;"
-               + "user=kk;password=kk;";
-        try {
-            System.out.println("paso1");
-            Connection con=DriverManager.getConnection(url);
-            System.out.println("paso2");
-            return con;
-            //Statement st=con.createStatement();
-           // ResultSet rs=st.executeQuery(url)
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            return null;
-        }
-       -*/
+       
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
        String url="jdbc:sqlserver://KATHERINE\\MSSQLSERVER01:1433;database=Pizza;user=kk;password=kk;";
